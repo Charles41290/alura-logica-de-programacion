@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<input/>
+<button> Encriptar </button>
+
+<script>
+    var text = document.querySelector("input");
+    var button = document.querySelector("button");
+    button.onclick = encriptar;
+    keys = {'a':'ai', 'e':'enter','i':'imes','o':'ober','u':'ufat' };
+    var text_encrip ='';
+
+    function encriptar()
+    {
+        var text_value = text.value;
+        var j = 0;
+        while(j < text_value.length)
+        {
+            if(text_value[j] != 'a' && text_value[j] != 'e' && text_value[j] != 'i' && 
+            text_value[j] != 'o' && text_value[j] != 'u')
+            {
+                text_encrip += text_value[j];
+                console.log(text_encrip);
+            }
+            else
+            {
+                if(text_value[j] == 'a')
+                {
+                    //text_encrip = text_value.replaceAll('a','ai');
+                    text_encrip += 'ai';
+                    console.log(text_encrip);
+                }
+
+                if(text_value[j] == 'e')
+                {
+                    text_encrip += 'enter';
+                    console.log(text_encrip);
+                }
+
+                if(text_value[j] == 'i')
+                {
+                text_encrip += 'imes';
+                console.log(text_encrip);
+                }
+
+                if(text_value[j] == 'o')
+                {
+                text_encrip += 'ober';
+                console.log(text_encrip);
+                }
+
+                if(text_value[j] == 'u')
+                {
+                text_encrip += 'ufat';
+                console.log(text_encrip);
+                }
+            }
+            
+            /*if(text_value[i] == 'o')
+            {
+                text_encrip = text_value.replaceAll('o','ober');
+                console.log(text_encrip);
+            }*/
+            j++;
+        }
+    }
+    
+    function encriptar2()
+    {
+        var text_value = text.value;
+        for(var letter in keys)
+        {
+            text_value = text_value.replaceAll(letter, keys[letter]);
+            console.log(text_value);
+        }
+        //console.log(text_value);
+    }   
+        
+    
+    function desencriptar()
+    {
+        var text_value = text.value;
+        /*for(var letter in keys)
+        {
+            text_value = text_value.replaceAll(keys[letter], letter);
+            //console.log(text_value);
+        }*/
+        
+        text_value.replace(/ai|enter|imes|ober|ufat/gi, function(matched){
+        switch(matched) {
+            case 'ai': return 'a'
+            case 'enter': return 'e'
+            case 'imes': return 'i'
+            case 'ober': return 'o'
+            case 'ufat': return 'u'
+            case ' ': return ''
+            default: return matched
+        }
+    });
+    console.log(text_value);
+    }
+
+
+</script>

@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<script>
+    function imprimir(mensaje)
+    {
+        document.write(mensaje)
+        saltar_linea()
+    }
+
+    function imprimir2(diferencia)
+    {
+        document.write("La diferencia de edades entre Carlos y Fredy es: "+ diferencia)
+        saltar_linea()
+    }
+
+    function saltar_linea()
+    {
+        document.write("<br>")
+    }
+
+    var edad_Carlos= 32, edad_Fredy = 30;
+    var diferencia_edades = edad_Carlos - edad_Fredy;
+
+    imprimir("La diferencia de edades entre Carlos y Fredy es: "+diferencia_edades);
+    saltar_linea();
+    saltar_linea();
+    document.write("Otra forma de definir la funcion imprimir");
+    saltar_linea()
+    imprimir2(diferencia_edades);
+
+</script>

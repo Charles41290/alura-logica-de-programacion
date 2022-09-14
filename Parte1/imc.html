@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+
+<h1> Programa IMC </h1>
+<script>    
+    function saltar_linea()
+    {
+        document.write("<br><br>")
+    }
+
+    function imprimir(mensaje)
+    {
+        document.write(mensaje)
+        saltar_linea()
+    }
+
+    function calcular_imc(peso, altura,nombre)
+    {
+        imc = peso/(altura*altura);
+        //return(imc);
+        imprimir("El IMC calculado de "+nombre+ " es: "+imc);
+    }
+    // Para 2 personas. Agrego 3 paramateros mas (peso2, altura2, nombre2)
+
+    function calcular_imc_promedio(peso1, altura1,nombre1,peso2,altura2,nombre2)
+    {
+        imc1 = peso1/(altura1*altura1);
+        imc2 = peso2/(altura2*altura2);
+        //return(imc);
+        imprimir("El promedio de los imc de "+nombre1+" y "+nombre2+ " es: "+(imc1+imc2)/2);
+    }
+    //Una forma mas limpia es utilizar 'return' dentro de la funcion imc y calcular el promedio a la hora de imprimir 
+    function calcular_imc2(peso, altura)
+    {
+        //imc = peso/(altura*altura);
+        //return(imc);
+        //mas simple seria definir el imc dentro de la instruccion return
+        return peso/(altura*altura)
+    }
+    var peso_carlos = 120, peso_ElTuki = 100;
+    var altura_carlos = 1.63, altura_ElTuki = 1.70;
+    var imc_carlos = calcular_imc2(peso_carlos, altura_carlos);
+    var imc_ElTuki = calcular_imc2(peso_ElTuki, altura_ElTuki);
+    var promedio = (imc_carlos + imc_ElTuki)/2;
+
+
+    //imprimir("El IMC de carlos es: "+calcular_imc(peso_carlos,altura_carlos));
+    saltar_linea();
+    calcular_imc(120, 1.63,"Carlos")
+    calcular_imc(100, 1.70,"El Tuki")
+    calcular_imc_promedio(120, 1.63,"Carlos",100, 1.70,"El Tuki")
+    imprimir("El promedio de los imc de Carlos y El Tuki es: "+ promedio);
+
+</script>

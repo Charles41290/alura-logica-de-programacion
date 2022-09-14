@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<canvas width = "600" height="400">
+</canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d"); //
+
+    pincel.fillStyle = "lightgrey"; //fillStyle es una propiedad
+                                    //tiene que estar antes de fillRect
+    pincel.fillRect(0, 0, 600, 400); // fillRect un function
+    pincel.fillStyle = "lightblue";
+    pincel.fillRect(200, 0, 200, 400);
+
+    pincel.fillStyle = "green";
+    pincel.fillRect(400, 0, 200, 400);
+
+    pincel.fillStyle = "yellow";
+    pincel.beginPath();
+    pincel.moveTo(300, 200);
+    pincel.lineTo(200, 400);
+    pincel.lineTo(400, 400);
+    pincel.fill();
+
+    pincel.fillStyle = "red";
+    pincel.beginPath();
+    pincel.arc(300, 200, 50, 0, 6.28);
+    pincel.fill();
+
+
+
+
+
+</script>

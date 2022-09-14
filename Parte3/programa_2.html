@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<canvas width = "600" height="400">
+</canvas>
+
+<script>
+
+    function dibujar_cuadrado(x, y, color)
+    { 
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d"); //
+
+        pincel.fillStyle = color; //fillStyle es una propiedad
+                                        //tiene que estar antes de fillRect
+        pincel.fillRect(x, y, 50, 50); // fillRect un function
+        pincel.strokeStyle = "black";   // define un borde negro
+        pincel.strokeRect(x, y, 50, 50);
+    }
+
+    
+    var x = 0, y = 0;
+    while(x < 600)
+    {   
+        while(y < 400)
+        {
+            dibujar_cuadrado(x, y, "red");
+            y = y + 50;
+        }
+        y = 0;
+        dibujar_cuadrado(x, y, "red");
+        x = x + 50;  
+    }
+    
+    /*
+    for (var i = 0; i < 600; i = i + 50)
+    {
+        for( var j = 0; j < 400; j = j + 50)
+        {
+            dibujar_cuadrado(i, j, "blue");
+        }
+        
+    }*/
+</script>

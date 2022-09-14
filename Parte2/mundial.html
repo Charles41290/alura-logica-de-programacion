@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<h1> Programa-Año Mundial </h1>
+<script>
+    function saltar_linea()
+    {
+        document.write("<br><br>")
+    }
+
+    function imprimir(mensaje)
+    {
+        document.write(mensaje)
+        saltar_linea()
+    }
+
+    var anio_mundial = 1930;
+    var limite_anio = parseInt(prompt("Ingrese año limite"));
+    while (anio_mundial < limite_anio) 
+    {
+        imprimir("Hubo mundial FIFA el año "+ anio_mundial);
+        anio_mundial = anio_mundial + 4;
+    }
+
+</script>

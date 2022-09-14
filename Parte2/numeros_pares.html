@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<h1> Programa-Pares 1-100</h1>
+<script>
+    
+    function saltar_linea()
+    {
+        document.write("<br>")
+    }
+
+    function imprimir(mensaje)
+    {
+        document.write(mensaje)
+        saltar_linea()
+    }
+
+    numero_par = 0;
+    n = 1;
+
+    while(numero_par <= 100)
+    {
+        imprimir("Numero par: "+ numero_par);
+        numero_par = 2*n;
+        n++;
+    }
+
+
+</script>

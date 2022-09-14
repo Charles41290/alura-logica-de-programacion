@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<h1>Programa </h1> <!-- las etiquetas pueden ir en minuscula o mayuscula-->
+<br>
+<H1>Programa</H1>
+
+<script>
+
+    var anio = 2022; // declaracion de variables
+    var promedio,edad1,edad2,edad3;
+    var name1 = 'Tuki', name2 = 'Lalo', name3 = 'Mica'
+    document.write("<br><br>Sin uso de variables");
+    document.write("<br>El Tuki tiene : "+(2022-1998)+" años");
+    document.write("<br>El Lalo nació: "+(2022-1990)+" años");
+    document.write("<br>La Mica nació: "+(2022-1977)+" años");
+    
+    edad1 = anio-1998; edad2 = anio-1990; edad = "45" //edad3 = anio-1977;
+    document.write("<br><br>Con uso de variables");
+    document.write("<br>El Tuki tiene : "+(edad1)+" años");
+    document.write("<br>El Lalo nació: "+(edad2)+" años");
+    document.write("<br>La Mica nació: "+(edad3)+" años");
+
+    promedio = (edad1 + edad2 + edad3)/3
+    document.write("<br><br> El promdio de las edades de " + name1 +", "+ name2 + ", " + name3 + " es " + Math.round(promedio)); 
+    // la 'm' de Math.round  tiene que estar en mayus
+
+</script>

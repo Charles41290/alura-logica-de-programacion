@@ -1,0 +1,58 @@
+<meta charset="UTF-8">
+
+<h1> Programa- Juego de adivinanzas </h1>
+<script>    
+    function saltar_linea()
+    {
+        document.write("<br><br>")
+    }
+
+    function imprimir(mensaje)
+    {
+        document.write(mensaje)
+        saltar_linea()
+    }
+
+    function sortea(n) 
+    {
+       return(Math.round(Math.random()*n));
+    }
+
+    var numero_pensado = sortea(10)
+    
+    var intentos_permitidos = 3;
+    var intentos_realizados = 1;
+
+    while(intentos_realizados <= intentos_permitidos)
+    {
+        var numero_propuesto = parseInt(prompt("Ingrese un numero entre 0-10"))
+        if (numero_pensado == numero_propuesto ) 
+        {
+            alert("Numero correcto");
+            break;
+        }
+        else  
+        {
+            intentos_remanentes = intentos_permitidos - intentos_realizados;
+            if(intentos_remanentes == 0)
+            {
+                alert("Numero incorrecto. Juego finalizado")
+            }
+            else
+            {
+                alert("Numero incorrecto. Usted dispone de " + intentos_remanentes+" adicionales");
+            }
+            intentos_realizados++;
+        }
+    }
+
+    if (numero_pensado == numero_propuesto )
+    {
+        imprimir("Felicidades. Ha acertado");
+    }
+    else
+    {
+        imprimir("No acerto en ninguno de los intentos. El numero pensado era: "+ numero_pensado);
+    }
+   
+</script>

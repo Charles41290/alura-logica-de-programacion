@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+
+<h1> Programa IMC mas limpio </h1>
+<script>    
+    function saltar_linea()
+    {
+        document.write("<br><br>")
+    }
+
+    function imprimir(mensaje)
+    {
+        document.write(mensaje)
+        saltar_linea()
+    }
+ 
+    function calcular_imc(peso, altura)
+    {
+        return peso/(altura*altura)
+    }
+    var nombre = prompt("Ingrese su nombre:");
+    var peso = prompt(nombre+", ingrese su peso:");
+    var altura= prompt(nombre+", ingrese su altura:");
+    var imc = calcular_imc(peso, altura);
+
+    imprimir("El IMC de "+nombre+"es: "+imc);
+
+    if (imc < 18.5) 
+    {
+        imprimir("IMC por abajo de lo recomendado")    
+    }
+
+    if (imc >= 18.5 && imc < 25) 
+    {
+        imprimir("IMC en el rango normal")    
+    }
+
+    if (imc >= 25 && imc < 30) 
+    {
+        imprimir("IMC en el rango de sobrepeso")    
+    }
+
+    if (imc >= 30) 
+    {
+        imprimir("IMC en el rango de obesidad")    
+    }
+    
+    
+</script>
